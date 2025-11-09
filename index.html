@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs4All - Find Your Dream Job in Bengaluru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jobs4All</h1>
+            <p class="tagline">Your Gateway to Employment in Bengaluru</p>
+        </header>
+
+        <main class="landing-page">
+            <div class="registration-card">
+                <h2>Get Started</h2>
+                <p>Register now to find your dream job in Bengaluru</p>
+                
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-primary">Register & Search Jobs</button>
+                </form>
+
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Jobs4All. Connecting job seekers in Bengaluru.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

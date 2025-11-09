@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Jobs - Jobs4All</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jobs4All</h1>
+            <p class="tagline">Search Jobs in Bengaluru</p>
+            <div class="user-info" id="userInfo"></div>
+        </header>
+
+        <main class="search-page">
+            <div class="search-section">
+                <h2>Find Your Perfect Job</h2>
+                
+                <div class="search-controls">
+                    <div class="form-group">
+                        <label for="category">Job Category</label>
+                        <select id="category" name="category" class="category-dropdown">
+                            <option value="">All Categories</option>
+                            <option value="finance">Finance and Accounting</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="it">IT Support and Management</option>
+                            <option value="engineering">Civil, Mechanical, and Electrical Engineering</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keyword">Keyword (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="keyword" 
+                            name="keyword" 
+                            placeholder="Search by job title or keyword"
+                        >
+                    </div>
+
+                    <button id="searchBtn" class="btn-primary">Search Jobs</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h3 id="resultsTitle">Available Jobs</h3>
+                <div id="jobResults" class="job-results"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Jobs4All. Connecting job seekers in Bengaluru.</p>
+        </footer>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>
