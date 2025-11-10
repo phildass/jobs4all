@@ -64,16 +64,70 @@ If the agent cannot determine exact commands, it should not guess dangerous oper
 - How to run and test locally (commands used).
 - Checklist: tests added, local tests passed, linting run (if applicable).
 
-## If you are a human maintainer — please update this file
-This repository's README is minimal. Please add the canonical commands to run and test the project below (replace the example placeholders):
+## Canonical Commands (Updated for jobs4all)
 
-- How to install dependencies (example):
-  - Node: `npm ci`
-  - Python: `pip install -r requirements.txt`
-- How to run the app locally (example): `npm start` or `python -m main`
-- How to run tests (example): `npm test` or `pytest`
+This is a **full-stack Node.js application** with React frontend and Express backend.
 
-When you add the above, the Copilot coding agent will be able to make higher-confidence changes.
+### Language/Stack Detection
+- **Frontend**: React (detected by `client/package.json`)
+- **Backend**: Node.js/Express (detected by `server/package.json`)
+- **Database**: MongoDB (connection in `server/config/db.js`)
+
+### Installation
+The project has two separate `package.json` files (client and server):
+
+**Backend (server):**
+```bash
+cd server
+npm install
+```
+
+**Frontend (client):**
+```bash
+cd client
+npm install
+```
+
+### Environment Setup
+1. Copy `.env.example` to `.env` in the root directory
+2. Update MongoDB URI and JWT secret in `.env`
+
+### Running the Application
+
+**Backend Server (Terminal 1):**
+```bash
+cd server
+npm run dev  # Development mode with nodemon
+# OR
+npm start    # Production mode
+```
+The backend runs on `http://localhost:5000`
+
+**Frontend (Terminal 2):**
+```bash
+cd client
+npm start
+```
+The frontend runs on `http://localhost:3000`
+
+### Database Seeding
+To populate the database with sample data:
+```bash
+cd server
+npm run seed
+```
+
+### Testing
+Currently, no automated tests are configured. Manual testing via:
+- Backend: Test API endpoints at `http://localhost:5000/api/*`
+- Frontend: Test UI at `http://localhost:3000`
+
+### Build Commands
+**Frontend Production Build:**
+```bash
+cd client
+npm run build
+```
 
 ## Contact / Maintainers
 - If `CODEOWNERS` or `MAINTAINERS` files exist, prefer contacting those addresses.
