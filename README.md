@@ -260,6 +260,8 @@ For issues or questions, please open an issue on GitHub.
 
 ## Copilot Coding Agent Onboarding
 
-This repository includes a comprehensive onboarding guide for automated coding agents: `.github/COPILOT-CODING-AGENT.md`
+This repository includes comprehensive onboarding guides for automated coding agents:
+- `.github/copilot-instructions.md` - Standard GitHub Copilot instructions (recommended)
+- `.github/COPILOT-CODING-AGENT.md` - Legacy onboarding guide (maintained for compatibility)
 
-Automated agents should review that file for language detection, build/test commands, and safety guidelines.
+Automated agents should review these files for language detection, build/test commands, and safety guidelines.
