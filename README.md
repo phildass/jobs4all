@@ -234,6 +234,24 @@ npm start
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Security Notes
+
+### CodeQL Analysis
+The application has been scanned with CodeQL. Key findings:
+
+- **Rate Limiting**: Currently not implemented. For production use, consider adding rate limiting middleware like `express-rate-limit` to prevent abuse.
+- **MongoDB Injection**: The application uses Mongoose ODM which provides built-in protection against NoSQL injection through parameterized queries.
+- **Email Validation**: Uses a simplified but secure regex pattern that prevents ReDoS attacks.
+
+### Production Recommendations
+For production deployment, consider:
+1. Add rate limiting middleware (e.g., `express-rate-limit`)
+2. Implement request logging and monitoring
+3. Use environment-specific secrets and keys
+4. Enable HTTPS/TLS
+5. Implement CSRF protection for state-changing operations
+6. Add input sanitization middleware
+
 ## License
 MIT License
 
